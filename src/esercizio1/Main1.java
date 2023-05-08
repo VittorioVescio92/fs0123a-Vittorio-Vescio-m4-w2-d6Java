@@ -12,7 +12,7 @@ public class Main1 {
 		int[] randomInt = new int[5];
 		Random r = new Random();
 		for (int i = 0; i < randomInt.length; i++) {
-			randomInt[i] = r.nextInt(11);
+			randomInt[i] = r.nextInt(1, 11);
 		}
 		int quit = 1;
 		Scanner scan = new Scanner(System.in);
@@ -88,14 +88,15 @@ public class Main1 {
 					}
 					break;
 				default:
+//					quit = 0;
 					System.out.println("Inserisci un valore da 1 a 5!");
 					break;
 				}
 			} else {
 				System.out.println("Applicazione in chiusura, grazie per averla utilizzata!");
-				quit = 0;
-				scan.close();
 			}
 		}
+		System.out.println("prova");
+		scan.close();
 	}
 }
